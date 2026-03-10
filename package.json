@@ -1,0 +1,34 @@
+{
+  "name": "git-setup",
+  "version": "1.0.0",
+  "description": "A global npm package to easily set up Git and GitHub SSH configuration",
+  "main": "index.js",
+  "bin": {
+    "git-setup": "./bin/git-setup.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "ssh",
+    "setup",
+    "cli",
+    "configuration"
+  ],
+  "author": "Aiken Gunay",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aikengunay/git-setup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aikengunay/git-setup/issues"
+  },
+  "homepage": "https://github.com/aikengunay/git-setup#readme",
+  "dependencies": {
+    "inquirer": "^8.2.6",
+    "chalk": "^4.1.2"
+  }
+}
