@@ -1,6 +1,6 @@
 {
   "name": "github-git-setup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A global npm package to easily set up Git and GitHub SSH configuration",
   "main": "index.js",
   "bin": {
