@@ -6,9 +6,19 @@ A CLI tool for setting up Git identity and GitHub SSH configuration with an inte
 
 ### From npm (Recommended)
 
+**Linux (one command that handles permissions automatically):**
+
+```bash
+mkdir -p ~/.npm-global && npm config set prefix '~/.npm-global' && echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc && export PATH=~/.npm-global/bin:$PATH && npm install -g github-git-setup
+```
+
+**macOS/Windows:**
+
 ```bash
 npm install -g github-git-setup
 ```
+
+**Note for Linux:** The command above configures npm to use `~/.npm-global` (user-owned) instead of `/usr/local` (requires sudo). After installation, restart your terminal or run `source ~/.bashrc` to use the command.
 
 ### From source
 
@@ -102,6 +112,7 @@ The tool saves your Git identity and SSH key path for reference, but Git configu
 - Uses `xclip` or `xsel` for clipboard (if available)
 - Proper SSH key permissions (600) and directory permissions (700)
 - ssh-agent integration
+- **Note:** For npm global installs, configure npm prefix to avoid permission errors (see Install section)
 
 ## Uninstall
 
