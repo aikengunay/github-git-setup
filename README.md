@@ -6,6 +6,10 @@ A CLI tool for setting up Git identity and GitHub SSH configuration with an inte
 
 ### From npm (Recommended)
 
+```bash
+npm install -g github-git-setup
+```
+
 **Linux users (one-time setup):**
 
 If you get permission errors, configure npm once:
@@ -17,23 +21,11 @@ echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-Then install normally:
-
-```bash
-npm install -g github-git-setup
-```
-
-**macOS/Windows users:**
-
-Install directly:
-
-```bash
-npm install -g github-git-setup
-```
-
-**Note:** After the one-time setup on Linux, you can use `npm install -g` for any package without sudo or permission issues.
+After this one-time setup, you can use `npm install -g` for any package without sudo or permission issues.
 
 ### From source
+
+For development or to install from source:
 
 ```bash
 git clone https://github.com/aikengunay/github-git-setup.git
@@ -105,23 +97,26 @@ The tool saves your Git identity and SSH key path for reference, but Git configu
 
 ## Requirements
 
-- Node.js
+- Node.js 14 or higher
 - Git
 - SSH (usually pre-installed on macOS/Linux, available for Windows via Git for Windows)
 
-## Cross-Platform Support
+## Platform Support
 
 ### Windows
+
 - Uses `clip` command for clipboard
 - SSH key permissions are handled automatically
 - Works with Git for Windows
 
 ### macOS
+
 - Uses `pbcopy` command for clipboard
 - Proper SSH key permissions (600) and directory permissions (700)
 - ssh-agent integration
 
 ### Linux
+
 - Uses `xclip` or `xsel` for clipboard (if available)
 - Proper SSH key permissions (600) and directory permissions (700)
 - ssh-agent integration
@@ -133,7 +128,7 @@ The tool saves your Git identity and SSH key path for reference, but Git configu
 npm uninstall -g github-git-setup
 ```
 
-Note: This will not remove your Git configuration or SSH keys. To remove those:
+**Note:** This will not remove your Git configuration or SSH keys. To remove those:
 
 ```bash
 # Remove Git config (optional)
@@ -144,6 +139,16 @@ git config --global --unset user.email
 rm ~/.ssh/id_ed25519_github
 rm ~/.ssh/id_ed25519_github.pub
 ```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
