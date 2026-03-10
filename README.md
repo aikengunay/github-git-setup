@@ -1,4 +1,4 @@
-# git-setup
+# github-git-setup
 
 A CLI tool for setting up Git identity and GitHub SSH configuration with an interactive setup process.
 
@@ -7,26 +7,26 @@ A CLI tool for setting up Git identity and GitHub SSH configuration with an inte
 ### From npm (Recommended)
 
 ```bash
-npm install -g git-setup
+npm install -g github-git-setup
 ```
 
 ### From source
 
 ```bash
-git clone https://github.com/aikengunay/git-setup.git
-cd git-setup
+git clone https://github.com/aikengunay/github-git-setup.git
+cd github-git-setup
 npm install -g .
 ```
 
-The `-g` flag installs the package globally, making `git-setup` available from any directory in your terminal.
+The `-g` flag installs the package globally, making `github-git-setup` available from any directory in your terminal.
 
 ## Usage
 
 ```bash
-git-setup
+github-git-setup
 ```
 
-Run `git-setup` from any directory. The tool will guide you through:
+Run `github-git-setup` from any directory. The tool will guide you through:
 
 1. **Git Identity Setup**: Configure your name and email
 2. **SSH Key Generation**: Create an ED25519 SSH key for GitHub
@@ -37,16 +37,16 @@ Run `git-setup` from any directory. The tool will guide you through:
 
 ```bash
 # Run setup
-git-setup
+github-git-setup
 
 # Show current configuration
-git-setup --config
+github-git-setup --config
 
 # Show version
-git-setup --version
+github-git-setup --version
 
 # Show help
-git-setup --help
+github-git-setup --help
 ```
 
 ## Features
@@ -65,13 +65,13 @@ git-setup --help
 
 ```bash
 # Show current configuration
-git-setup --config
+github-git-setup --config
 
 # Show version
-git-setup --version
+github-git-setup --version
 
 # Show help
-git-setup --help
+github-git-setup --help
 ```
 
 ### Config File Location
@@ -106,7 +106,7 @@ The tool saves your Git identity and SSH key path for reference, but Git configu
 ## Uninstall
 
 ```bash
-npm uninstall -g git-setup
+npm uninstall -g github-git-setup
 ```
 
 Note: This will not remove your Git configuration or SSH keys. To remove those:

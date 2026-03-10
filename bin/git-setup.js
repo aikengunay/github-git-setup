@@ -427,7 +427,7 @@ function showConfig() {
       log('\nSSH Key: Not found', 'warning');
     }
   } else {
-    log('No configuration found. Run git-setup to configure.', 'warning');
+    log('No configuration found. Run github-git-setup to configure.', 'warning');
   }
 }
 
@@ -435,14 +435,14 @@ function showVersion() {
   try {
     const packageJsonPath = path.join(__dirname, '..', 'package.json');
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    log(`git-setup v${packageJson.version}`, 'info');
+    log(`github-git-setup v${packageJson.version}`, 'info');
   } catch (err) {
-    log('git-setup (version unknown)', 'info');
+    log('github-git-setup (version unknown)', 'info');
   }
 }
 
 function showHelp() {
-  log('\nUsage: git-setup [options]', 'info');
+  log('\nUsage: github-git-setup [options]', 'info');
   log('\nOptions:', 'info');
   log('  -c, --config              Show current configuration', 'info');
   log('  -v, --version             Show version number', 'info');
